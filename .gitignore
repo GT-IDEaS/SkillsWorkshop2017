@@ -1,3 +1,11 @@
+## My Ignores
+# From PyCharm
+*.DS_STORE
+*.iml
+*.xml
+*.idea
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
