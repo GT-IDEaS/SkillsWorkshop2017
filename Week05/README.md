@@ -17,6 +17,7 @@ GT-IDEaS/SkillsWorkshop2017/Week05/assignments/.  We attempt to decouple the
 2.  Assignment 2 - Speedups
 3.  Assignment 3 - Workloads and Scheduling
 4.  Assignment 4 - Resource Sharing
+5.  Assignment 5 - Challenge Problem
 
 Before we begin, some initial setup is required.  We need to ensure everyone
  has a c++ compiler.  Since compatability between Mac OS and OpenMP is non-trivial,
@@ -35,7 +36,7 @@ This will create a python envoriment using conda, which you should have installe
 source activate ideas
 ```
 
-Now, everyone should have access to the g++ compiler.  Within the `Week05` directory, go into the `makefile` and
+Now, everyone should have access to the g++ compiler.  Within the `Week05/assignments/` directory, go into the `Makefile` and
  edit the `COMPILER` option accordingly.  You should have:
 
 ```
@@ -43,7 +44,7 @@ COMPILER=g++
 ```
 
 If you already had access to Intel compilers and want to use `icpc`, feel free.  The three
- options in `makefile` shuld be completed as:
+ options in `Makefile` should be completed as:
 
 ```
 COMPILER=g++      
@@ -57,7 +58,7 @@ VERSION=-std=c++11
 OPENMP=-qopenmp   
 ```
 
-Now that the makefile is configured correclty, you can execute the following on the command line:
+Now that the Makefile is configured correclty, you can execute the following on the command line:
 
 `make a1`
 
@@ -99,7 +100,7 @@ Challenge: Use the `omp barrier` pragma to have each thread print in order, from
   If necessary, prevent overflow by changing the summation `sum == i` to either `sum += 1` or `sum += 0`.  Briefly discuss your
  strategy in the writeup. 
 
-5.  Assignment 5 contains the skeleton for a code which collapses an N x N matrix to an N vector by summing on one dimension.  Using what
+5.  Assignment 5 contains the skeleton for a code which collapses an N x N matrix to an N vector by summing accross one dimension.  Using what
  has been previously covered, implement the remaining code.  To check for correctness, the initial matrix contains all ones.  Discuss
  briefly your strategy and push your solution.
 
