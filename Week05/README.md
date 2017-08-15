@@ -68,11 +68,16 @@ Doing so compiles the `assignment1.cc` file.  To run the executable, execute:
 
 The same process is done for all other assignments.
 
-Now, we will discuss each assignment and how to complete it.
-Assignment submission will be done entirely through Github.  Create a file, `writeup.pdf`, which will contain
-all necessary workup.  Include this file in the `Week05` directory. 
- Each assignment should correspond to a section in your writeup.  
-To complete the project, you will push your `writeup.pdf` file and all code alterations. 
+Project completion consists of two parts. First, you will update some of the code included in the assignments.
+To differentiate everyone's code, we ask that you perform:
+
+`mv assignments assignments_your_last_name`
+
+Edit the files in your assignments folder according to the instructions below.  Once you are done, push your code
+ to your fork and make a pull request.  The second aspect of this assignment requires a writeup submission to
+T-Square.  We ask that you create some plots and comment on your strategies within this writeup.  Follow the instructions
+ listed below to complete the writeup.
+Please designate different sections in your writeup corresponding to different assignments.
 
 1.  Assignment 1 is an introductory program containing "Hello World" for OpenMP.  The program is already
  completed.  Compile and run the executable.  Notice the outputs.  Is there a particular order in which threads print?  
