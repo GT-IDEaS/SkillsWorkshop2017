@@ -69,7 +69,7 @@ Doing so compiles the `assignment1.cc` file.  To run the executable, execute:
 The same process is done for all other assignments.
 Now, we will discuss each assignment and how to complete it.
 Assignment submission will be done entirely through Github.  Create a file, `writeup.pdf`, which will contain
-all necessary workup.  Each assignmnet shoudl correspond to a section in your writeup.  
+all necessary workup.  Each assignment should correspond to a section in your writeup.  
 To complete the project, you will push your `writeup.pdf` file and all code alterations. 
 
 1.  Assignment 1 is an introductory program containing "Hello World" for OpenMP.  The program is already
@@ -82,7 +82,7 @@ Challenge: Use the `omp barrier` pragma to have each thread print in order, from
   Notice the outputs.  Now, insert a pragma in `assignment2.cc` to parallelize the loop.  This should only require one
  line of code.  Recompile and run the program.  How well is the loop parallelized?  Now, tweak the `ITERATIONS`
  and `WORK_TIME` variables at the top of `assignment2.cc` and re-evaluate the performance.  You should be able to get 
- very good speedups!  Include a speedup plot of this program in your writeup. 
+ very good speedups!  Briefly discuss your analysis and include a speedup plot of this program in your writeup. 
 
 3.  Assignment 3 is nearly identical to Assignment 2, but the work of the loop is severely non-uniform.
   First, go into `assignment3.cc` and try to understand how the work is changing for each iteration of the loop.
@@ -98,7 +98,7 @@ Challenge: Use the `omp barrier` pragma to have each thread print in order, from
  an integer overflow.  Programming in C++ does not come with the luxury of unlimited precision, so we are limited to what can be 
  stored in an `unsigned long long int` type.  You will probably have to go well past this limit to start to see good speedups.
   If necessary, prevent overflow by changing the summation `sum == i` to either `sum += 1` or `sum += 0`.  Briefly discuss your
- strategy in the writeup. 
+ strategy and analysis in the writeup. 
 
 5.  Assignment 5 contains the skeleton for a code which collapses an N x N matrix to an N vector by summing accross one dimension.  Using what
  has been previously covered, implement the remaining code.  To check for correctness, the initial matrix contains all ones.  Discuss
