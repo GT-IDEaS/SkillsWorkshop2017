@@ -1,11 +1,10 @@
-// Assignment 4 - Resource sharing with prefix sum
+// Assignment 5 - Summing across one dimension of a matrix
 // IDEaS Workshop Week 5: HPC
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <omp.h>
 #include <unistd.h>
-#include <time.h>
 #include <vector>
 #include <tuple>
 #include <math.h>
@@ -14,8 +13,18 @@
 // N > max_threads
 #define N 20000
 
+// How much RAM?
+#define MEMORY 50
+
 int main() 
 {
+    // memory check
+    if((double)(N / 1e9) * N * 4 > MEMORY * 0.8){
+        printf("Not enough memory! ~~ ");
+        printf("Needed: %6.3fGB\n", N / 1e9 * N * 4 / 0.8);
+        exit(1);
+    }
+
     // setup ~
     int max_threads = omp_get_max_threads();
     double times[max_threads];
@@ -28,12 +37,12 @@ int main()
         int nthreads = m + 1;
         double t0 = time_in_seconds();
     
-        // write answer to this vec
+        // write answer to this vec (initialized to all 0s)
         std::vector<int> vec(N, 0);
 
         // ==> implement solution below! <== //    
 
-   
+
  
         // ==> implement solution above! <== //    
         
