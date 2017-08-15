@@ -67,9 +67,11 @@ Doing so compiles the `assignment1.cc` file.  To run the executable, execute:
 `./a1`
 
 The same process is done for all other assignments.
+
 Now, we will discuss each assignment and how to complete it.
 Assignment submission will be done entirely through Github.  Create a file, `writeup.pdf`, which will contain
-all necessary workup.  Each assignment should correspond to a section in your writeup.  
+all necessary workup.  Include this file in the `Week05` directory. 
+ Each assignment should correspond to a section in your writeup.  
 To complete the project, you will push your `writeup.pdf` file and all code alterations. 
 
 1.  Assignment 1 is an introductory program containing "Hello World" for OpenMP.  The program is already
@@ -93,14 +95,14 @@ Challenge: Use the `omp barrier` pragma to have each thread print in order, from
 
 4.  Assignment 4 contains a parallel prefix sum evaluator.  First, compile and run the program.  Evaluate the outputs.
   The speedups should get worse as more threads are used.  After you understand why this is, edit the code and fix the issue.
-  This may take a few lines of code.  After, recompile and run the program.  You should be able to acquire some good speedups.
+  Recompile and run the program.  You should be able to acquire some good speedups.
   Depending on your machine, you may have to crank up the `N` variable quite a bit.  Unfortunately, after about 10,000, you will likely get
  an integer overflow.  Programming in C++ does not come with the luxury of unlimited precision, so we are limited to what can be 
  stored in an `unsigned long long int` type.  You will probably have to go well past this limit to start to see good speedups.
   If necessary, prevent overflow by changing the summation `sum == i` to either `sum += 1` or `sum += 0`.  Briefly discuss your
  strategy and analysis in the writeup. 
 
-5.  Assignment 5 contains the skeleton for a code which collapses an N x N matrix to an N vector by summing accross one dimension.  Using what
+5.  Assignment 5 contains the skeleton for a code which collapses an N x N matrix to an N vector by summing across one dimension.  Using what
  has been previously covered, implement the remaining code.  To check for correctness, the initial matrix contains all ones.  Discuss
  briefly your strategy and push your solution.
 
