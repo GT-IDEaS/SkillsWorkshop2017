@@ -107,3 +107,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Executables from week 05 assignment
+a1
+a2
+a3
+a4
+a5
+*.o
