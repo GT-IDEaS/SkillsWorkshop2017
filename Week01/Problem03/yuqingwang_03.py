@@ -1,0 +1,18 @@
+num=600851475143;
+judge=0;
+x=0;
+i=3;
+while(True):
+    if(num%i==0):
+        x=num/i;
+        y=2;
+        while(y<x/2):
+            if(x%y==0):
+                judge=1;
+                break;
+            y=y+1;
+        if(judge==0):
+            print(x);
+            break;
+        judge=0;  
+    i=i+1;
